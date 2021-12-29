@@ -11,19 +11,19 @@ balloonImg = loadAnimation("assets/balloon1.png","assets/balloon2.png","assets/b
 
 function setup(){
 
-//background image
+//imagem de plano de fundo
 bg = createSprite(165,485,1,1);
 bg.addImage(bgImg);
 bg.scale = 1.3
 
-//creating top and bottom grounds
+//criando canto superior e inferior
 bottomGround = createSprite(200,390,800,20);
 bottomGround.visible = false;
 
 topGround = createSprite(200,10,800,20);
 topGround.visible = false;
       
-//creating balloon     
+//criando o balão     
 balloon = createSprite(100,200,20,50);
 balloon.addAnimation("balloon",balloonImg);
 balloon.scale = 0.2;
@@ -36,13 +36,13 @@ function draw() {
   
   background("black");
         
-          //making the hot air balloon jump
+          //fazendo o balão de ar quente pular
           if(keyDown("space")) {
             balloon.velocityY = -6 ;
             
           }
 
-          //adding gravity
+          //adicionando gravidade
            balloon.velocityY = balloon.velocityY + 2;
    
         drawSprites();
