@@ -77,7 +77,7 @@ restart.visible = false;
 }
 
 function draw() {
-  
+  background(bgImg)
 
   if(gameState === PLAY){
 
